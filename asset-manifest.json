@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/LIASEF/my-simple-app/static/css/main.5a20b1e0.css",
+    "main.js": "/LIASEF/my-simple-app/static/js/main.541920d5.js",
+    "static/js/453.1b972bf8.chunk.js": "/LIASEF/my-simple-app/static/js/453.1b972bf8.chunk.js",
+    "index.html": "/LIASEF/my-simple-app/index.html",
+    "main.5a20b1e0.css.map": "/LIASEF/my-simple-app/static/css/main.5a20b1e0.css.map",
+    "main.541920d5.js.map": "/LIASEF/my-simple-app/static/js/main.541920d5.js.map",
+    "453.1b972bf8.chunk.js.map": "/LIASEF/my-simple-app/static/js/453.1b972bf8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a20b1e0.css",
+    "static/js/main.541920d5.js"
+  ]
+}
