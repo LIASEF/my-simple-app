@@ -17,18 +17,27 @@ function Calculator() {
   const inputOperation = (nextOperation) => {
     const inputValue = parseFloat(display);
 
-    if (previousValue === null) {
-      setPreviousValue(inputValue);
-    } else if (operation) {
-      const currentValue = previousValue || 0;
-      const newValue = calculate(currentValue, inputValue, operation);
+    if (nextOperation === '=') {
+      if (operation && previousValue !== null) {
+        const newValue = calculate(previousValue, inputValue, operation);
+        setDisplay(String(newValue));
+        setPreviousValue(newValue);
+        setOperation(null);
+      }
+    } else {
+      if (previousValue === null) {
+        setPreviousValue(inputValue);
+      } else if (operation) {
+        const currentValue = previousValue || 0;
+        const newValue = calculate(currentValue, inputValue, operation);
 
-      setDisplay(String(newValue));
-      setPreviousValue(newValue);
+        setDisplay(String(newValue));
+        setPreviousValue(newValue);
+      }
+
+      setOperation(nextOperation);
+      setDisplay('0');
     }
-
-    setOperation(nextOperation);
-    setDisplay('0');
   };
 
   const calculate = (firstValue, secondValue, operation) => {
@@ -40,8 +49,6 @@ function Calculator() {
       return firstValue * secondValue;
     } else if (operation === '/') {
       return firstValue / secondValue;
-    } else if (operation === '=') {
-      return secondValue;
     }
     return secondValue;
   };
